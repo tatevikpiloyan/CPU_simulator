@@ -125,7 +125,7 @@ int main()
                 }
             }
         }
-        else if (opcode.find(':'))
+        else if (opcode.find(':') != -1)
         {
             opcode.pop_back();
             CPU.jump.insert(std::make_pair(opcode, a_out.tellg()));
