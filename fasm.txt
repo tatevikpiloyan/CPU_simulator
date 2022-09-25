@@ -1,0 +1,17 @@
+MOV r3 5
+MOV r1 0
+MOV r2 1
+loop:
+CMP r3 0
+JL end_even
+ADD r1 r2
+SUB r3 1
+CMP r3 0
+JLE odd
+ADD r2 r1
+SUB r3 1
+JMP loop
+odd:
+PRINT r2
+end_even:
+PRINT r1
