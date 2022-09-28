@@ -78,6 +78,8 @@ int main()
             a_out >> opcode;
             for (auto& i : CPU.cond_jump[CPU.CMP(operand2, operand1)])
             {
+                operand1.clear();
+                operand2.clear();
                 if (i == opcode)
                 {
                     a_out >> operand1;
@@ -130,6 +132,11 @@ int main()
             opcode.pop_back();
             CPU.jump.insert(std::make_pair(opcode, a_out.tellg()));
             continue;
+        }
+        else
+        {
+            std::cout << "No such opcode!" << std::endl;
+
         }
         opcode.clear();
         operand1.clear();
