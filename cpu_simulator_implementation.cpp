@@ -131,11 +131,6 @@ int main()
             CPU.jump.insert(std::make_pair(opcode, a_out.tellg()));
             continue;
         }
-        else
-        {
-            std::cout << "No such opcode!" << std::endl;
-            break;
-        }
         opcode.clear();
         operand1.clear();
         operand2.clear();
